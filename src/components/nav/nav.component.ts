@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { MyButtonComponent } from "../my-button/my-button.component";
 
 @Component({
   selector: 'app-nav',
-  imports: [],
+  imports: [MyButtonComponent],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
