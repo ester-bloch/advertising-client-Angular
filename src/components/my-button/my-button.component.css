@@ -1,0 +1,17 @@
+button {
+    background-color: burlywood; /* צבע רקע */
+    border: none; /* ללא גבול */
+    color: white; /* צבע טקסט */
+    padding: 6px 12px; /* ריפוד קטן יותר */
+    text-align: center; /* מיקום טקסט */
+    text-decoration: none; /* ללא קו תחתון */
+    display: inline-block; /* תצוגה כ-inline block */
+    font-size: 14px; /* גודל גופן */
+    margin: 4px 2px; /* מרווח */
+    cursor: pointer; /* סמן עכבר */
+    border-radius: 5px; /* פינות מעוגלות */
+    transition: background-color 0.2s, border-color 0.2s; /* אנימציה לשינוי צבע */
+}button:hover {
+    background-color: rgba(210, 180, 140, 0.7); /* צבע רקע דומה ל-burlywood */
+    border: 1px solid rgba(139, 69, 19, 1); /* גבול חום כהה */
+}
