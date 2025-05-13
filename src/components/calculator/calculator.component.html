@@ -1,1 +1,10 @@
-<p>calculator works!</p>
+
+<div class="calaulator">
+  
+  <app-calaulator-nav></app-calaulator-nav>
+  <div class="mainCalaulator">
+    @for (item of this.calcService.chosenItems; track $index) {
+    <app-item-to-buy [item]="item"></app-item-to-buy>
+    }
+  </div>
+</div>

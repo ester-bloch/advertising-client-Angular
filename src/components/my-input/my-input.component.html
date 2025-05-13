@@ -1,0 +1,19 @@
+<input
+  [value]="valueToPut"
+  min="200"
+  [placeholder]="textToShow"
+  [type]="myType"
+  (click)="handleClick()"
+  onblur="checkValue()"
+/>
+<input
+  min="200"
+  [placeholder]="textToShow"
+  type="number"
+  [(ngModel)]="valueToPut"
+  (click)="handleClick()"
+  (blur)="checkValue(valueToPut!.toString())"
+/>
+@if(this.showError){
+<p [className]="'error'">אין אפשרות להזמין פחות מ200 יחידות</p>
+}

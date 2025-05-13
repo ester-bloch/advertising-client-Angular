@@ -1,4 +1,23 @@
-<p>
-  <button [type]="myType" (click)="handleClick()">{{ textToShow }}  <i [class]="iconName"></i>
-  </button>
-</p>
+
+@if(routerLink!=undefined && routerLink!=null){
+  <button
+    [type]="myType"
+  [routerLink]="routerLink"
+  (click)="handleClick()"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  style="background-color: ba"
+>
+  {{ textToShow }} <i [class]="iconName"></i>
+</button>
+}
+@else {
+  <button
+  [type]="myType"
+  (click)="handleClick()"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+  style="background-color: ba"
+>
+  {{ textToShow }} <i [class]="iconName"></i>
+</button>
+}
+
