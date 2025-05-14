@@ -1,0 +1,19 @@
+<p>footer works!</p>
+<p>ליצירת קשר</p>
+<p>אלי בלוי 0506861837 </p>
+<p>{{"00506861837p@gmail.com‏"}}</p>
+@if(display==false){
+    <button type="button" class="btn btn-primary" (click)="openC()">כדי שנוכל לחזור אליך...</button>
+    }
+@if(display==true){
+<div class="container mt-3">
+    <form class="was-validated" (ngSubmit)="save()">
+        <app-contact></app-contact>
+        <div class="mb-3 mt-3">
+            <label for="comment">הערה</label>
+            <textarea class="form-control" rows="5" id="comment" name="text">כל מה שרצית לכתוב או לשאול, אז כאן:</textarea>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+}
