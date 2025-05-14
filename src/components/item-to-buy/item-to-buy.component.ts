@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Input, output, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, output, Output } from '@angular/core';
 import { MyButtonComponent } from "../my-button/my-button.component";
 import { CalculatorService } from '../../services/calculator-service.service';
-import { Item } from '../../clases/Item';
+import { EnumItemType, Item } from '../../clases/Item';
 import { MyInputComponent } from "../my-input/my-input.component";
 
 @Component({
@@ -10,16 +10,24 @@ import { MyInputComponent } from "../my-input/my-input.component";
   templateUrl: './item-to-buy.component.html',
   styleUrl: './item-to-buy.component.css'
 })
-export class ItemToBuyComponent {
-  /**
-   *
-   */
+export class ItemToBuyComponent implements OnInit{
   constructor(public calculatorService: CalculatorService) {
     this.item = calculatorService.chosenItems[0];
   }
+  ngOnInit(): void {
+    if(this.item.type!=EnumItemType.הדפסה){
+    this.calculatorService.chosenItems.forEach(i=>{
+      if(i.type==EnumItemType.הדפסה && i.size==this.item.size){
+        this.blocked=true
+        this.ValueForBlocked=i.amount
+      }
+    })
+    }
+  }
+  blocked:boolean=false;
+  ValueForBlocked:number|undefined =200
   @Input() item: Item
   @Input() picName?: string
-  // @Input() myType?: string
   @Output() OnQantityChange = new EventEmitter();
   onCange() {
     this.OnQantityChange.emit();
@@ -34,6 +42,7 @@ export class ItemToBuyComponent {
     const numericValue = parseFloat(value);
     this.item.amount = numericValue;
     this.calculatorService.calcSumToPay()
+  if(this.OnQantityChange)
+    this.OnQantityChange.emit();
   }
-
 }

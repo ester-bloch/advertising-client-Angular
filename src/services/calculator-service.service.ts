@@ -26,6 +26,7 @@ calcSumToPay(){
    this.chosenItems.forEach(y=>{
     let num=this.calcPrice(y.amount,y.maxPrice,y.minPrice)
       this.SumToPay+=num;
+      console.log(this.SumToPay)
    })
 
 }
@@ -33,6 +34,6 @@ calcSumToPay(){
   if (quantity < 200) return high;
   if (quantity > 10000) return low;
   const ratio = (quantity - 200) / (10000 - 200);
-  return high - ratio * (high - low);
+  return (high - ratio * (high - low))*quantity;
 }
 }

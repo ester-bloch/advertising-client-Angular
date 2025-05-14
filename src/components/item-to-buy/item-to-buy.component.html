@@ -13,12 +13,18 @@
         (myOnClick)="remove()"
         [backgroundColor]="'red'"
       ></app-my-button>
+      @if(!this.blocked){
       <app-my-input
         [textToShow]="'הכנס כמות'"
         [myType]="'number'"
         [valueToPut]="200"
         (myOnChange)="onQuantityChange($event)"
-      ></app-my-input>
+      ></app-my-input
+      >}
+       @else {
+      <label>{{ this.ValueForBlocked }}</label>
+      <label>בהזמנת הדפסה מתאפשרת  {{item.type}} של כל הכמות בלבד</label>
+      }
     </div>
   </div>
   <br />

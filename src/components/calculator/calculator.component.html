@@ -1,9 +1,9 @@
 <div class="divSumToPay">
-<label> סך הכל </label>
-  <label >{{" "}} {{this.calcService.SumToPay|currency:'ILS'}}</label>
+  <label> סך הכל </label>
+  <label>{{ " " }} {{ this.calcService.SumToPay | currency : "ILS" }}</label>
+  <app-my-button [iconName]="`fa-regular fa-credit-card`" [textToShow]="'למעבר לתשלום'" [routerLink]="'../pay'"></app-my-button> 
 </div>
 <div class="calaulator">
-  
   <app-calaulator-nav></app-calaulator-nav>
   <div class="mainCalaulator">
     @for (item of this.calcService.chosenItems; track $index) {

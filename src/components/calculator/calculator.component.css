@@ -4,13 +4,11 @@
 }
 .divSumToPay {
     display: flex;
-    justify-content: center; /* מרכז את התוכן אופקית */
+    justify-content: center;
 }
-
 .divSumToPay label {
-    font-weight: bold; /* הופך את הטקסט למודגש */
-    font-size: 24px; /* גודל טקסט מותאם */
-    color: #333; /* צבע טקסט מותאם */
-    margin: 0 6px; /* מרווח של 10px בין הלייבלים */
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    margin: 0 6px;
 }
-
