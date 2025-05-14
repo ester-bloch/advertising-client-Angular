@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, output, Output } from '@angular/core';
 import { MyButtonComponent } from "../my-button/my-button.component";
 import { CalculatorService } from '../../services/calculator-service.service';
-import { EnumItemType, Item } from '../../clases/Item';
+import { EnumItemType, Item } from '../../classes/Item';
 import { MyInputComponent } from "../my-input/my-input.component";
 
 @Component({

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { EnumItemType, EnumSize, Item } from '../clases/Item';
+import { EnumItemType, EnumSize, Item } from '../classes/Item';
 
 @Injectable({
   providedIn: 'root'

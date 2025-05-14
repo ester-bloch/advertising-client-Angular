@@ -12,20 +12,23 @@
                     <p>קצר מידי</p>
                 }
                 @else if(name.errors!['pattern']){
-                    <p>שם אינו תקין</p>
+                    <p>שם מורכב מאותיות בלבד</p>
                 }
             </div>
         </div>
         <div class="mb-3 mt-3">
             <label for="phone" class="form-label">פלאפון</label>
             <input type="text" class="form-control" id="phone" placeholder="הכנס מספר פלאפון" 
-            [(ngModel)]="data.thisUser.phone" name="phone" #phone="ngModel" required minlength="9" pattern="^[0-9]+$">
+            [(ngModel)]="data.thisUser.phone" name="phone" #phone="ngModel" required minlength="9" maxlength="10" pattern="^[0-9]+$">
             <div [hidden]="!phone.invalid || !phone.touched ||!phone.dirty">
                 @if(phone.errors!['required']){
                     <p>שדה חובה</p>
                 }
                 @else if(phone.errors!['minlength']){
                     <p>קצר מידי</p>
+                }
+                @else if(phone.errors!['maxlength']){
+                    <p>ארוך מידי</p>
                 }
                 @else if(phone.errors!['pattern']){
                     <p>טלפון מורכב ממספרים בלבד</p>

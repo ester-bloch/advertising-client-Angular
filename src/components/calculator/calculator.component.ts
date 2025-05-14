@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CalculatorService } from '../../services/calculator-service.service';
 import { CalaulatorNavComponent } from "../calaulator-nav/calaulator-nav.component";
 import { ItemToBuyComponent } from "../item-to-buy/item-to-buy.component";
-import { Item } from '../../clases/Item';
+import { Item } from '../../classes/Item';
 import { FormsModule } from '@angular/forms';
 import { CurrencyPipe } from '@angular/common';
 import { MyButtonComponent } from "../my-button/my-button.component";
