@@ -1,0 +1,10 @@
+.error {
+  color: red;
+}
+
+body {
+  direction: rtl;
+}
+.home{
+    direction: rtl;
+}

@@ -2,3 +2,15 @@
     display: grid;
     grid-template-columns: 25% 75%;
 }
+.divSumToPay {
+    display: flex;
+    justify-content: center; /* מרכז את התוכן אופקית */
+}
+
+.divSumToPay label {
+    font-weight: bold; /* הופך את הטקסט למודגש */
+    font-size: 24px; /* גודל טקסט מותאם */
+    color: #333; /* צבע טקסט מותאם */
+    margin: 0 6px; /* מרווח של 10px בין הלייבלים */
+}
+

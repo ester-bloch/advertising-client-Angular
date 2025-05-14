@@ -11,7 +11,8 @@ export class MyInputComponent {
   @Input() textToShow?: string
   @Input() valueToPut: number | undefined | null
   @Input() myType?: string
-  @Output() myOnChange = new EventEmitter();
+  @Output() myOnChange = new EventEmitter<string>();
+
 
   handleClick() {
     this.myOnChange.emit();
@@ -22,6 +23,7 @@ export class MyInputComponent {
       this.valueToPut = 200;
       this.showError = true;
     } else {
+      this.myOnChange.emit(value);
       this.showError = false;
       this.valueToPut = numericValue;
     }

@@ -14,9 +14,9 @@ export class ItemToBuyComponent {
   /**
    *
    */
-  constructor(public calculatorService:CalculatorService) { 
-    this.item=calculatorService.chosenItems[0];
-   }
+  constructor(public calculatorService: CalculatorService) {
+    this.item = calculatorService.chosenItems[0];
+  }
   @Input() item: Item
   @Input() picName?: string
   // @Input() myType?: string
@@ -24,9 +24,16 @@ export class ItemToBuyComponent {
   onCange() {
     this.OnQantityChange.emit();
   }
-  remove(){
-    this.calculatorService.chosenItems= 
-     this.calculatorService.chosenItems.filter(i=>i!=this.item)
+  remove() {
+    this.calculatorService.chosenItems =
+      this.calculatorService.chosenItems.filter(i => i != this.item);
+    this.calculatorService.calcSumToPay ()
+  }
+  onQuantityChange(value: string) {
+    console.log(value)
+    const numericValue = parseFloat(value);
+    this.item.amount = numericValue;
+    this.calculatorService.calcSumToPay()
   }
 
 }
