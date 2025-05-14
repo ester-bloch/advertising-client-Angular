@@ -3,7 +3,6 @@
   <div class="card" style="width: 400px">
     <!-- <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%"> -->
     <div class="card-body">
-      <h4 class="card-title">{{ this.item.type + "  " + this.item.size }}</h4>
       <p class="card-text">
         בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה בלה מלל
       </p>
@@ -17,15 +16,14 @@
       <app-my-input
         [textToShow]="'הכנס כמות'"
         [myType]="'number'"
-        [valueToPut]="200"
-        (myOnChange)="onQuantityChange($event)"
+        (myOnChange)="onQuantityChange()"
       ></app-my-input
       >}
        @else {
-      <label>{{ this.ValueForBlocked }}</label>
-      <label>בהזמנת הדפסה מתאפשרת  {{item.type}} של כל הכמות בלבד</label>
+      <label>{{ this.item.amount }}</label>
+      <p [classList]="'error'">בהזמנת הדפסה מתאפשרת  {{item.type}} של כל הכמות בלבד</p>
       }
     </div>
-  </div>
+  </div> 
   <br />
 </div>
