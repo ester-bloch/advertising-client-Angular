@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalculatorService } from '../../services/calculator-service.service';
 import { MyButtonComponent } from "../my-button/my-button.component";
-import { EnumItemType, Item } from '../../clases/Item';
+import { EnumItemType, Item } from '../../classes/Item';
 // import { EnumItemType } from "../../clases/Item.ts"
 @Component({
   selector: 'app-calaulator-nav',
