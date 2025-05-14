@@ -1,0 +1,40 @@
+<table class="table">
+    <thead>
+      <tr>
+        @for(title of titles;track title)
+        {
+        <th>{{title}}</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+        @if(users){
+            @for(user of users;track user)
+            {
+                <tr>
+                    <td>{{user.name}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.email}}</td>
+                </tr>
+            } 
+        }
+        @if(massages){
+            @for(massage of massages;track massage)
+            {
+                <tr>
+                    <td>{{massage.user?.name}}</td>
+                    <td>{{massage.user?.phone}}</td>
+                    <td>{{massage.user?.email}}</td>
+                    <td>{{massage.massage}}</td>
+                    <td>
+                        <app-my-button 
+                        [textToShow]="massage.status"
+                        (myOnClick)="updateStatus(massage.id)"
+                        [backgroundColor]="color">
+                        </app-my-button>
+                    </td>
+                </tr>
+            } 
+        }
+    </tbody>
+  </table>
