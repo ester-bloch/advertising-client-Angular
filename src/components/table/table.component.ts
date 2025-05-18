@@ -14,18 +14,16 @@ export class TableComponent {
   @Input() titles:Array<string>=new Array<string>
   @Input() users?:Array<User>=[]
   @Input() massages?:Array<Massage>=[]
-  color:string="red"
+  EnumStatus = EnumStatus;
   updateStatus(id:number){
     if(!this.massages)return;
     let i=this.massages.findIndex(x=>x.id==id)
     if(i !== -1 && this.massages[i].status==EnumStatus.newT){
       this.massages[i].status=EnumStatus.InTreatment;
-      this.color="orange"
     }
     else if(i !== -1 && this.massages[i].status==EnumStatus.InTreatment){
       this.massages[i].status=EnumStatus.Treated;
-      this.color="yellow"
     }
-      
+    
   }
 }

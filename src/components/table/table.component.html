@@ -30,7 +30,7 @@
                         <app-my-button 
                         [textToShow]="massage.status"
                         (myOnClick)="updateStatus(massage.id)"
-                        [backgroundColor]="color">
+                        [backgroundColor]="massage.status==EnumStatus.newT?'red':massage.status==EnumStatus.InTreatment?'orange':'yellow'">
                         </app-my-button>
                     </td>
                 </tr>

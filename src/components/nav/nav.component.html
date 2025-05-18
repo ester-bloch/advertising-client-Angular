@@ -1,6 +1,35 @@
-<div [id]="'nav'">
+<!-- <div [id]="'nav'">
   <p>nav works!</p>
   <img src="images/לוגו1.jpg" width="50px" />
   <app-my-button [routerLink]="'home'" [textToShow]="'בית'"> </app-my-button>
-    <app-my-button [routerLink]="'calculator'"[textToShow]="'מחשבון עלויות'"> </app-my-button>
+  <app-my-button [routerLink]="'calculator'"[textToShow]="'מחשבון עלויות'"> </app-my-button>
+</div> -->
+
+
+<nav class="navbar navbar-expand-sm bg-light navbar-dark" style="position: sticky; z-index: 100;">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="'home'"><img src="images/לוגו2.jpg" width="150px" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'home'">בית</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'calculator'">מחשבון עלויות</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink] (click)="openD()">הזמנה קיימת</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">Another link</a></li>
+            <li><a class="dropdown-item" href="#">A third link</a></li>
+          </ul>
+        </li> -->
+      </ul>
     </div>
+</nav>
