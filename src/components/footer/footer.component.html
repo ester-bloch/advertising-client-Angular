@@ -7,7 +7,7 @@
     }
 @if(display==true){
 <div class="container mt-3">
-    <form class="was-validated" (ngSubmit)="save()">
+    <form class="was-validated" (ngSubmit)="save()" #form="ngForm">
         <app-contact></app-contact>
         <div class="mb-3 mt-3">
             <label for="comment">הערה</label>

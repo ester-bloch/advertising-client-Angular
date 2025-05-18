@@ -1,3 +1,7 @@
-#nav{
-    display: flex;
+.container-fluid{
+    background-color: white;
+    
+}
+.nav-link{
+    color: blue;
 }
