@@ -38,9 +38,11 @@ export class NavComponent {
         this.dataStatus.codeOrder=result;
         if(this.dataStatus.codeOrder == "123456")
           this.RouterToStatus.navigate(["tables"]);
-        else 
+        else if(this.dataStatus.codeOrder == "#####")
         // כאן נבדוק אם הקוד קיים בשרת
           this.RouterToStatus.navigate(["status"]);
-    }
+    //     else 
+          
+     }
   })
 }}

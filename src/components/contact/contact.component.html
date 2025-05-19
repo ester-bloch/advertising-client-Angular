@@ -1,51 +1,48 @@
 <!-- <p>צרו איתנו קשר</p> -->
 <!-- <img src="images/לוגו1.jpg" width="200px" /> -->
         <div class="mb-3 mt-3">
-            <label for="name" class="form-label">שם</label>
             <input class="form-control" id="name" placeholder="הכנס שם" 
             [(ngModel)]="data.thisUser.name" name="name" #name="ngModel" required minlength="3" pattern="^[א-תa-zA-Z\s]+$">
             <div [hidden]="!name.invalid ||!name.dirty ||!name.touched">
                 @if(name.errors!['required']){
-                    <p>שדה חובה</p>
+                    <p class="err">שדה חובה</p>
                 }
                 @else if(name.errors!['minlength']){
-                    <p>קצר מידי</p>
+                    <p class="err">קצר מידי</p>
                 }
                 @else if(name.errors!['pattern']){
-                    <p>שם מורכב מאותיות בלבד</p>
+                    <p class="err">שם מורכב מאותיות בלבד</p>
                 }
             </div>
         </div>
         <div class="mb-3 mt-3">
-            <label for="phone" class="form-label">פלאפון</label>
             <input type="text" class="form-control" id="phone" placeholder="הכנס מספר פלאפון" 
             [(ngModel)]="data.thisUser.phone" name="phone" #phone="ngModel" required minlength="9" maxlength="10" pattern="^[0-9]+$">
             <div [hidden]="!phone.invalid || !phone.touched ||!phone.dirty">
                 @if(phone.errors!['required']){
-                    <p>שדה חובה</p>
+                    <p class="err">שדה חובה</p>
                 }
                 @else if(phone.errors!['minlength']){
-                    <p>קצר מידי</p>
+                    <p class="err">קצר מידי</p>
                 }
                 @else if(phone.errors!['maxlength']){
-                    <p>ארוך מידי</p>
+                    <p class="err">ארוך מידי</p>
                 }
                 @else if(phone.errors!['pattern']){
-                    <p>טלפון מורכב ממספרים בלבד</p>
+                    <p class="err">טלפון מורכב ממספרים בלבד</p>
                 }
            
             </div>
         </div>
         <div class="mb-3 mt-3">
-            <label for="email" class="form-label">מייל</label>
             <input class="form-control" id="email" placeholder="הכנס כתובת מייל" 
             [(ngModel)]="data.thisUser.email" name="email" #email="ngModel" required pattern="^[א-תa-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$">
             <div [hidden]="!email.invalid || !email.touched ||!email.dirty">
                 @if(email.errors!['required']){
-                    <p>שדה חובה</p>
+                    <p class="err">שדה חובה</p>
                 }
                 @else if(email.errors!['pattern']){
-                    <p>מייל לא תקין</p>
+                    <p class="err">מייל לא תקין</p>
                 }
            
             </div>

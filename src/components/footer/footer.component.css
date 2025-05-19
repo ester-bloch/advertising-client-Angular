@@ -1,0 +1,12 @@
+.all{
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    direction: rtl;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.toContact{
+    padding-right: 10%;
+}
