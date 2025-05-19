@@ -15,4 +15,39 @@ button {
 button:hover {
     background-color: rgba(210, 180, 140, 0.7);
     border: 1px solid rgba(139, 69, 19, 1);
+ }
+/*button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-soft);
+  min-width: 120px;
 }
+
+button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+button i {
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: var(--success-color);
+}
+
+button[type="submit"]:hover {
+  background-color: #219653;
+}
+ */

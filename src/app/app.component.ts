@@ -7,7 +7,7 @@ import { AllTheTablesComponent } from '../components/all-the-tables/all-the-tabl
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavComponent, FooterComponent,AllTheTablesComponent],
+  imports: [RouterOutlet, NavComponent, FooterComponent, AllTheTablesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

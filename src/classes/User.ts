@@ -8,6 +8,5 @@ export class User{
         public email?:string
     ){
         this.id = User._nextId++;
-
     }
 }
