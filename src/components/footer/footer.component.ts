@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { ContactComponent } from '../contact/contact.component';
-import { MassageService } from '../../services/massage.service';
-import { Massage } from '../../classes/Massage';
-import { UserService } from '../../services/user.service';
-import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import {MatIconModule} from '@angular/material/icon';
+
 @Component({
   selector: 'app-footer',
-  imports: [RouterLink],
+  imports: [RouterLink,MatIconModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

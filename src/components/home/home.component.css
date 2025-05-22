@@ -1,0 +1,60 @@
+
+.home-wrapper {
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+  padding: 2rem;
+  line-height: 1.6;
+}
+.hero {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.gallery .images img {
+  width: 200px;
+  margin: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.why-us ul li, .how-it-works ol li {
+  margin-bottom: 0.5rem;
+}
+.packages .package {
+  background: #e9ecef;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+.contact-form input, .contact-form button {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #f1f1f1;
+  margin-top: 3rem;
+}
+.footer-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
+

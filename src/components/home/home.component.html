@@ -1,1 +1,61 @@
-<p>home works!</p>
+<div class="home-wrapper">
+
+    <section class="hero">
+      <h1>המודעה שלך – ברחוב מחר!</h1>
+      <p>הדפסה, תלייה והפצה בכל הארץ – באחריות ובמהירות.</p>
+      <button class="cta-button" [routerLink]="'calculator'">הזמן עכשיו מודעה</button>
+    </section>
+  
+    <section class="gallery">
+      <h2>מודעות ברחבי הארץ</h2>
+      <div class="images">
+        <img src="images/תלייה.avif" alt="מודעה תלויה" />
+        <img src="images/לוח מודעות.avif" alt="הדפסת מודעה" />
+        <img src="images/בתי דפוס.webp" alt="הפצה בשטח" />
+      </div>
+    </section>
+    <app-image-loop></app-image-loop>
+    <section class="why-us">
+      <h2>למה לבחור בנו?</h2>
+      <ul>
+        <li>🖨️ הדפסה איכותית על מגוון ניירות</li>
+        <li>🚚 הפצה מהירה בכל הארץ</li>
+        <li>📅 עמידה בזמנים ואחריות</li>
+        <li>📞 שירות לקוחות אישי וזמין</li>
+      </ul>
+    </section>
+  
+    <section class="how-it-works">
+      <h2>איך זה עובד?</h2>
+      <ol>
+        <li>שולחים לנו קובץ מוכן</li>
+        <li>בוחרים אזור תלייה וכמות</li>
+        <li>אנחנו מדפיסים, תולים – ושולחים דיווח</li>
+      </ol>
+    </section>
+  
+    <section class="pricing">
+      <h2>חבילות פופולריות</h2>
+      <div class="packages">
+        <div class="package">הפצת 100 מודעות בירושלים – 250 ₪</div>
+        <div class="package">תלית 200 מודעות בגוש דן – 450 ₪</div>
+        <div class="package">הדפסת 600 מודעות A4 צבעוני - 1200 ₪</div>
+        <div class="package">הדפסת 1000 מודעות A3 שחור לבן - 900 ₪</div>
+
+      </div>
+    </section>
+  
+    
+  
+    <section class="testimonials">
+      <h2>מה הלקוחות שלנו אומרים</h2>
+      <blockquote>
+        "מודעה ביום ראשון – וביום שני כבר הגיעו לקוחות! שירות מטורף."
+      </blockquote>
+      <blockquote>
+        "מהירים, אמינים, ושירות שלא רואים כל יום. ממליץ בחום."
+      </blockquote>
+    </section>
+
+    <app-to-send-massage></app-to-send-massage>
+  </div>

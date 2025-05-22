@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 
 @Component({
+  standalone: true,
   selector: 'app-contact',
   imports: [NgClass,FormsModule],
   templateUrl: './contact.component.html',

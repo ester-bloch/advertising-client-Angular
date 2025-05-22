@@ -2,16 +2,25 @@
 <p>יש לכם שאלות?<br>רוצים לדבר על זה?<br>אולי סתם לשתף אותנו?<br>
     כתבו לנו, אנו כאן כדי לעזור לכם!</p>
 <div class="frame">
-   
+@if(sand==false){
 <div class="container mt-3">
-    <form class="was-validated" (ngSubmit)="save()" #form="ngForm">
+    
+    <form class="was-validated" (ngSubmit)="save()" [class.was-validated]="form.invalid && form.touched" #form="ngForm">
         <app-contact></app-contact>
         <div class="mb-3 mt-3">
             <textarea class="form-control" rows="5" id="comment" name="text" placeholder="כל מה שרצית לכתוב או לשאול, אז כאן:" 
             [(ngModel)]="mass" name="massage"></textarea>
           </div>
-        <button type="submit" class="btn btn-primary">תחזרו אלי⬅️</button>
+        <button [disabled]="form.invalid" type="submit" class="btn btn-primary">תחזרו אלי⬅️</button>
     </form>
 </div>
+}
+@else if(sand==true){
+    <div id="gif" class="container mt-3">
+        <img src="images/נהיה-בקשר.gif" width="300px" />
+        <p>ההודעה נשלחה בהצלחה!</p>
+        <button type="button" class="btn btn-primary" [routerLink]="'home'">חזרה לדף הבית</button>
+    </div>
+}
 </div>
 </div>

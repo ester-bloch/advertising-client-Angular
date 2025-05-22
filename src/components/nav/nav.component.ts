@@ -3,7 +3,7 @@ import { MyButtonComponent } from "../my-button/my-button.component";
 import { Router, RouterLink } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { OrderStatusDialogComponent } from '../order-status-dialog/order-status-dialog.component';
-import { statusService } from '../../services/status.service';
+import { orderService } from '../../services/order.service';
 
 @Component({
   selector: 'app-nav',
@@ -12,21 +12,21 @@ import { statusService } from '../../services/status.service';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-  constructor(public RouterToStatus:Router,public dataStatus:statusService){}
+  constructor(public RouterToStatus:Router,public dataOrder:orderService ){}
   readonly code=model('');
   readonly dialog = inject(MatDialog);
 
   openD(){
-    if(this.dataStatus.codeOrder == undefined){
+    if(this.dataOrder.codeOrder == undefined){
       this.openDialog();
     }
-    else if(this.dataStatus.codeOrder == "123456")
+    else if(this.dataOrder.codeOrder == "123456")
       this.RouterToStatus.navigate(["tables"]);
     else 
       this.RouterToStatus.navigate(["status"]);
   }
   openDialog(): void {
-    if(this.dataStatus.codeOrder == undefined){}
+    if(this.dataOrder.codeOrder == undefined){}
     const dialogRef = this.dialog.open(OrderStatusDialogComponent, {
       data: {code: this.code()},
     });
@@ -35,10 +35,10 @@ export class NavComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       if (result !== undefined) {
-        this.dataStatus.codeOrder=result;
-        if(this.dataStatus.codeOrder == "123456")
+        this.dataOrder.codeOrder=result;
+        if(this.dataOrder.codeOrder == "123456")
           this.RouterToStatus.navigate(["tables"]);
-        else if(this.dataStatus.codeOrder == "#####")
+        else if(this.dataOrder.codeOrder == "#####")
         // כאן נבדוק אם הקוד קיים בשרת
           this.RouterToStatus.navigate(["status"]);
     //     else 

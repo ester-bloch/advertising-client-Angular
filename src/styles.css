@@ -21,3 +21,7 @@ textarea.is-invalid {
   background-position: right center;
   background-size: 0 !important;
 }
+button{
+    all:unset;
+    background-color: rgb(56, 115, 227);
+}
