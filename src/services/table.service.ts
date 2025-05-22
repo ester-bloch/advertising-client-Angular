@@ -8,7 +8,7 @@ export class TableService{
         
     }
     titleUsersTable:Array<string>=["שם","טלפון","מייל"]
-    titleMassageTable:Array<string>=["שם","טלפון","מייל","הודעה","מצב הפניה"]
+    titleMassageTable:Array<string>=["שם","טלפון","מייל","הודעה","מצב הפניה","הערת מנהל"]
     titleOrderTable:Array<string>=["שם","טלפון","מייל","פרטי הזמנה"]
     
 }
