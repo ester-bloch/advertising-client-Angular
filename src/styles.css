@@ -25,3 +25,5 @@ button{
     all:unset;
     background-color: rgb(56, 115, 227);
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

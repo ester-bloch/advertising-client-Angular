@@ -1,11 +1,12 @@
 
+<!-- my-input.component.html -->
 <input
   min="200"
   [placeholder]="textToShow"
   type="number"
-  [(ngModel)]="valueToPut"
+  [(ngModel)]="item.amount"
   (click)="handleClick()"
-  (blur)="checkValue(valueToPut!.toString())"
+  (blur)="checkValue()"
 />
 @if(this.showError){
 <p [className]="'error'">אין אפשרות להזמין פחות מ200 יחידות</p>

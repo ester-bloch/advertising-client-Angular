@@ -6,4 +6,4 @@ export class User{
         public Phone?:string,
         public Email?:string
     ){}
-}
+

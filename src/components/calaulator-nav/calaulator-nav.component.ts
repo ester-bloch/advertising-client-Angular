@@ -18,7 +18,6 @@ export class CalaulatorNavComponent implements OnInit {
     if (!this.calculatorService.chosenItems.includes(item))
       this.calculatorService.chosenItems.push(item)
     this.calculatorService.chosenItems.sort((a: Item, b: Item) => this.calculatorService.availableItems.indexOf(a) - this.calculatorService.availableItems.indexOf(b))
-    console.log(this.calculatorService.chosenItems)
     this.calculatorService.calcSumToPay()
   }
 }

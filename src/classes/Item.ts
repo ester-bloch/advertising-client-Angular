@@ -17,4 +17,5 @@ export class Item {
         public MinPrice:number,
         public MaxPrice:number,
         public Amount?:number) { }
+
 }

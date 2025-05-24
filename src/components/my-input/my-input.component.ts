@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Item } from '../../classes/Item';
+import { CalculatorService } from '../../services/calculator-service.service';
 @Component({
   selector: 'app-my-input',
   imports: [CommonModule, FormsModule],
@@ -8,25 +10,26 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './my-input.component.css'
 })
 export class MyInputComponent {
+  constructor(public calculatorService: CalculatorService) {
+    this.item = calculatorService.chosenItems[0];
+  }
   @Input() textToShow?: string
-  @Input() valueToPut: number | undefined | null
   @Input() myType?: string
-  @Output() myOnChange = new EventEmitter<string>();
+  @Input() item: Item
+  @Output() myOnChange = new EventEmitter<number>();
+  public showError: boolean = false
 
 
   handleClick() {
     this.myOnChange.emit();
   }
-  checkValue(value: string) {
-    const numericValue = parseFloat(value);
-    if (numericValue < 200) {
-      this.valueToPut = 200;
+  checkValue() {
+    if (this.item.amount!<200) {
+      this.item.amount = 200;
       this.showError = true;
     } else {
-      this.myOnChange.emit(value);
+      this.myOnChange.emit();
       this.showError = false;
-      this.valueToPut = numericValue;
     }
   }
-  public showError: boolean = false
 }
