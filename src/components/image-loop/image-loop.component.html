@@ -1,0 +1,11 @@
+<div class="carousel-container">
+    <button (click)="prev()" [disabled]="startIndex === 0">‹</button>
+    
+    <div class="image-strip">
+        @for (img of visibleImages; track img) {
+            <img [src]="img" />
+          }    </div>
+    
+    <button (click)="next()" [disabled]="startIndex + visibleCount >= images.length">›</button>
+  </div>
+  

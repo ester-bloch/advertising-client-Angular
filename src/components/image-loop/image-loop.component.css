@@ -1,0 +1,18 @@
+.carousel-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-strip {
+    display: flex;
+    overflow: hidden;
+    width: 600px; /* מתאים ל-6 תמונות של 100px */
+  }
+  
+  .image-strip img {
+    width: 100px;
+    height: 100px;
+    margin: 0 2px;
+    object-fit: cover;
+  }
+  

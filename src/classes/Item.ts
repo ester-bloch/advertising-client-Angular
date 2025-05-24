@@ -10,5 +10,12 @@ export enum EnumSize{
 
 
 export class Item {
-    constructor(public Id:number,public type:EnumItemType,public size:EnumSize, public minPrice:number,public maxPrice:number,public amount?:number) { }
+    constructor(
+        public Id:number,
+        public Type:EnumItemType,
+        public Size:EnumSize,
+        public MinPrice:number,
+        public MaxPrice:number,
+        public Amount?:number) { }
+
 }

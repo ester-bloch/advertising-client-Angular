@@ -1,12 +1,9 @@
 export class User{
-    private static _nextId = 1;
 
-    public id: number;
     constructor(
-        public name?:string,
-        public phone?:string,
-        public email?:string
-    ){
-        this.id = User._nextId++;
-    }
-}
+        public Id?: number,
+        public Name?:string,
+        public Phone?:string,
+        public Email?:string
+    ){}
+

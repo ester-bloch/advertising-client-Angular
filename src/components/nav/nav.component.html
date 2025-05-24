@@ -5,6 +5,7 @@
   <app-my-button [routerLink]="'calculator'"[textToShow]="'מחשבון עלויות'"> </app-my-button>
 </div> -->
 
+
 <!-- nav.component.html -->
 <nav class="navbar navbar-expand-sm bg-light navbar-dark" style="position: sticky; z-index: 100;">
   <div class="container-fluid">
@@ -20,7 +21,10 @@
           <a class="nav-link" [routerLink]="'calculator'">מחשבון עלויות</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink] (click)="openD()">הזמנה קיימת</a>
+          <a class="nav-link" [routerLink]="'contect'">ליצירת קשר</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="openD()">הזמנה קיימת</a>
         </li>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>

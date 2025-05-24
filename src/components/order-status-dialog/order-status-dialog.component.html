@@ -1,5 +1,5 @@
 <h2 mat-dialog-title>בדיקת מצב הזמנה קיים</h2>
-<mat-dialog-content>
+<mat-dialog-content class="mat-typography">
   <p>הזן את מספר ההזמנה שלך </p>
   <mat-form-field>
     <mat-label>קוד הזמנה</mat-label>
@@ -7,6 +7,6 @@
   </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">חזור</button>
-  <button mat-button [mat-dialog-close]="code()" cdkFocusInitial>אשר</button>
+  <button type="button" class="btn btn-primary" (click)="onNoClick()">חזור</button>
+  <button type="button" class="btn btn-primary" [mat-dialog-close]="code()" >אשר</button>
 </mat-dialog-actions>

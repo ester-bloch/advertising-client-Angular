@@ -2,5 +2,28 @@
 body{
     background-color: rgb(205, 227, 251);
 }
+input.ng-valid,
+input.ng-invalid,
+input.ng-dirty,
+input.ng-touched,
+textarea.ng-valid,
+textarea.ng-invalid,
+textarea.ng-dirty,
+textarea.ng-touched,
+input.is-valid,
+input.is-invalid,
+textarea.is-valid,
+textarea.is-invalid {
+  border-color: #ced4da !important; /* אפור ניטרלי */
+  box-shadow: none !important;
+  background-image: none !important;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 0 !important;
+}
+button{
+    all:unset;
+    background-color: rgb(56, 115, 227);
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
