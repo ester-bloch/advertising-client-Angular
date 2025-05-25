@@ -16,11 +16,11 @@ export class ItemToBuyComponent implements OnInit {
   }
   ngOnInit(): void {
     const e = EnumItemType.הדפסה
-    if (this.item.type != e) {
+    if (this.item.Type != e) {
       this.calculatorService.chosenItems.forEach(i => {
-        if (i.type == EnumItemType.הדפסה && i.size == this.item.size && this.item != i) {
+        if (i.Type == EnumItemType.הדפסה && i.Size == this.item.Size && this.item != i) {
           this.blocked = true
-          this.item.amount=i.amount
+          this.item.Amount=i.Amount
         }
       })
     }
@@ -36,11 +36,11 @@ export class ItemToBuyComponent implements OnInit {
     this.calculatorService.calcSumToPay()
   }
   onQuantityChange() {
-    if (this.item.type == EnumItemType.הדפסה) {
+    if (this.item.Type == EnumItemType.הדפסה) {
       this.calculatorService.chosenItems.forEach(i => {
-        if (i.size == this.item.size && i != this.item) {
+        if (i.Size == this.item.Size && i != this.item) {
           this.calculatorService.chosenItems.sort((a: Item, b: Item) => this.calculatorService.availableItems.indexOf(a) - this.calculatorService.availableItems.indexOf(b))
-          i.amount = this.item.amount
+          i.Amount = this.item.Amount
         }
       })
     }

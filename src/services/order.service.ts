@@ -12,6 +12,13 @@ export class orderService{
             err=>{console.log(err)}
         )
     }
+    getOrderById(){
+        if(this.codeOrder==-1) return;
+        this.ApiService.getOrderById(this.codeOrder).subscribe(
+            data => {this.currentOrder=data},
+            err=>{console.log(err)}
+        )
+    }
     deleteOrder(orderId:number){
         this.ApiService.deleteOrder(orderId).subscribe()
     }
@@ -21,10 +28,9 @@ export class orderService{
             err=> {console.log(err)}
         )
     }
-    updateOrder(oldOrder:Order,status:string){
-        let order=oldOrder;
+    updateOrder(order:Order,status:string){
         order.Status=status;
-        this.ApiService.putOrder(oldOrder.Id,order).subscribe(
+        this.ApiService.putOrder(order.Id,order).subscribe(
             data => {console.log("updateOrder")},
             err=> {console.log(err)}
         )
@@ -35,7 +41,8 @@ export class orderService{
             err=>{console.log(err)}
         )
     }
-    codeOrder?:string
-    orders:Array<Order>=new Array<Order>()
+    currentOrder?:Order;
+    codeOrder:number=-1;
+    orders:Array<Order>=[]
     countOrders:number=0
 }

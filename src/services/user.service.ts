@@ -14,5 +14,5 @@ export class UserService{
         )
     }
     thisUser:User=new User
-    users:Array<User>=new Array<User>()
+    users:Array<User>=[]
 }

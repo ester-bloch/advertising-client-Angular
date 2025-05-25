@@ -21,10 +21,13 @@ export class MassageService{
             err=> {console.log(err)}
         )
     }
-    updateMassage(oldMassage:Massage,status:EnumStatus){
-        let massage=oldMassage;
+    updateMassage(massage:Massage,status:EnumStatus){
         massage.Status=status;
-        this.ApiService.putMassage(oldMassage.Id,massage).subscribe(
+        if (massage.Id == null) {
+            console.error("אין ID לעדכון ההודעה");
+            return;
+          }
+        this.ApiService.putMassage(massage.Id,massage).subscribe(
             data => {console.log("updateMassage")},
             err=> {console.log(err)}
         )

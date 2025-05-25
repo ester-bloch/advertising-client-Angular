@@ -17,10 +17,10 @@ export class NavComponent {
   readonly dialog = inject(MatDialog);
 
   openD(){
-    if(this.dataOrder.codeOrder == undefined){
+    if(this.dataOrder.codeOrder == -1){
       this.openDialog();
     }
-    else if(this.dataOrder.codeOrder == "123456")
+    else if(this.dataOrder.codeOrder == 123456)
       this.RouterToStatus.navigate(["tables"]);
     else 
       this.RouterToStatus.navigate(["status"]);
@@ -35,14 +35,22 @@ export class NavComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       if (result !== undefined) {
-        this.dataOrder.codeOrder=result;
-        if(this.dataOrder.codeOrder == "123456")
+        
+        if(result == 123456){
+          this.dataOrder.codeOrder=result;
           this.RouterToStatus.navigate(["tables"]);
-        else if(this.dataOrder.codeOrder == "#####")
-        // כאן נבדוק אם הקוד קיים בשרת
+        }
+        else {
+          const matchingOrder = this.dataOrder.orders.find(order => order.Id == result);
+          if (matchingOrder) {
+            this.dataOrder.codeOrder=result;
+          }
           this.RouterToStatus.navigate(["status"]);
+          }
+        }
+          
     //     else 
           
      }
-  })
+  )
 }}
