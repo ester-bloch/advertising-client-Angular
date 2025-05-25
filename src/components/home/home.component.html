@@ -8,32 +8,50 @@
   
     <section class="gallery">
       <h2>מודעות ברחבי הארץ</h2>
-      <div class="images">
-        <img src="images/תלייה.avif" alt="מודעה תלויה" />
-        <img src="images/לוח מודעות.avif" alt="הדפסת מודעה" />
-        <img src="images/בתי דפוס.webp" alt="הפצה בשטח" />
-      </div>
+      <app-image-loop></app-image-loop>
     </section>
-    <app-image-loop></app-image-loop>
+    
     <section class="why-us">
       <h2>למה לבחור בנו?</h2>
-      <ul>
-        <li>🖨️ הדפסה איכותית על מגוון ניירות</li>
-        <li>🚚 הפצה מהירה בכל הארץ</li>
-        <li>📅 עמידה בזמנים ואחריות</li>
-        <li>📞 שירות לקוחות אישי וזמין</li>
-      </ul>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="icon">🖨️</div>
+          <p>הדפסה איכותית במגוון גדלים</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🚚</div>
+          <p>הפצה מהירה בכל הארץ</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📅</div>
+          <p>עמידה בזמנים ואחריות</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📞</div>
+          <p>שירות לקוחות אישי וזמין</p>
+        </div>
+      </div>
     </section>
-  
+    
+    <section class="order-count">
+      <h1>עד עכשיו בוצעו {{countOrders}} הזמנות</h1>
+    </section>
+    
     <section class="how-it-works">
       <h2>איך זה עובד?</h2>
       <ol>
-        <li>שולחים לנו קובץ מוכן</li>
-        <li>בוחרים אזור תלייה וכמות</li>
-        <li>אנחנו מדפיסים, תולים – ושולחים דיווח</li>
+        <li><a [routerLink]="'calculator'" class="step-button">בוחרים אזור תלייה גודל וכמות</a></li>
+        <li><a [routerLink]="'calculator'" class="step-button">שולחים לנו קובץ מוכן</a></li>
+        <li><a [routerLink]="'calculator'" class="step-button">אנחנו מדפיסים, תולים – ושולחים דיווח</a></li>
       </ol>
     </section>
-  
+
+    <div class="bg-image"></div>
+
+  <div class="bg-text">
+    <h1 style="font-size:50px">אנחנו תולים רק במקומות חוקיים!</h1>
+  </div>
+
     <section class="pricing">
       <h2>חבילות פופולריות</h2>
       <div class="packages">
@@ -45,17 +63,5 @@
       </div>
     </section>
   
-    
-  
-    <section class="testimonials">
-      <h2>מה הלקוחות שלנו אומרים</h2>
-      <blockquote>
-        "מודעה ביום ראשון – וביום שני כבר הגיעו לקוחות! שירות מטורף."
-      </blockquote>
-      <blockquote>
-        "מהירים, אמינים, ושירות שלא רואים כל יום. ממליץ בחום."
-      </blockquote>
-    </section>
-
     <app-to-send-massage></app-to-send-massage>
   </div>

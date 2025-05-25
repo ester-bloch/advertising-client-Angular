@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { statusService } from '../../services/order.service';
+import { orderService } from '../../services/order.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-order-status',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './order-status.component.html',
   styleUrl: './order-status.component.css'
 })
-export class OrderStatusComponent {
+export class OrderStatusComponent implements OnInit {
 
-  constructor(public dataStatus: statusService) {}
+  status: string = '';
 
+  constructor(public dataOrder: orderService) {}
 
+  ngOnInit(): void {
+    this.status = this.dataOrder.currentOrder?.Status || '';
+  }
 
 }

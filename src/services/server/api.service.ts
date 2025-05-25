@@ -39,6 +39,9 @@ export class ApiService {
   getAllOrders():Observable<Array<Order>>{
     return this.http.get<Array<Order>>(`${this.baseUrl}/orders`);	
   }
+  getOrderById(id:number):Observable<Order>{
+    return this.http.get<Order>(`${this.baseUrl}/orders/${id}`);
+  }
   getCountOrders():Observable<number>{
     return this.http.get<number>(`${this.baseUrl}/orders/count`);
   }

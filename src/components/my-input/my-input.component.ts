@@ -24,8 +24,8 @@ export class MyInputComponent {
     this.myOnChange.emit();
   }
   checkValue() {
-    if (this.item.amount!<200) {
-      this.item.amount = 200;
+    if (this.item.Amount!<200) {
+      this.item.Amount = 200;
       this.showError = true;
     } else {
       this.myOnChange.emit();

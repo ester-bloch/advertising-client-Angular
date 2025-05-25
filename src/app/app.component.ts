@@ -15,7 +15,7 @@ import { MassageService } from '../services/massage.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
-  constructor(public serUser:UserService,public serTables:TableComponent,public serMassage:MassageService){}
+  constructor(public serUser:UserService,public serMassage:MassageService){}
   ngOnInit(): void {
     
   }

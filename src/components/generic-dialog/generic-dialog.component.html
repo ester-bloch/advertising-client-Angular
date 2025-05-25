@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+
+<mat-dialog-content>
+  <ng-container *ngIf="data.editable; else readOnlyBlock">
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>ערך</mat-label>
+      <input matInput [(ngModel)]="currentValue" />
+    </mat-form-field>
+  </ng-container>
+
+  <ng-template #readOnlyBlock>
+    <p>{{ data.value }}</p>
+  </ng-template>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">סגור</button>
+  <button mat-button color="primary" *ngIf="data.editable" (click)="save()">שמור</button>
+</mat-dialog-actions>
+

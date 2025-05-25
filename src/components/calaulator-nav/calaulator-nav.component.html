@@ -3,6 +3,6 @@
 <div class="calaulator-nav">
   <label>הוסף פריטים להזמנתך</label>
   @for (item of this.calculatorService.availableItems; track $index) {
-    <app-my-button [iconName]="'fa-solid fa-plus'" [textToShow]=" item.type+ ' ' +item.size " (myOnClick)="addItem(item)"></app-my-button>
+    <app-my-button [iconName]="'fa-solid fa-plus'" [textToShow]=" item.Type+ ' ' +item.Size " (myOnClick)="addItem(item)"></app-my-button>
   }
 </div>
