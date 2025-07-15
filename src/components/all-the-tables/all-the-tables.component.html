@@ -1,4 +1,4 @@
-
+<div class="all">
 <p>טבלת כל המשתמשים</p>
 <app-table 
     [titles]="dataTables.titleUsersTable"
@@ -8,5 +8,10 @@
 <app-table 
     [titles]="dataTables.titleMassageTable"
     [massages]="dataMassage.massages"
+></app-table>
+<p>טבלת הזמנות</p>
+<app-table 
+    [titles]="dataTables.titleOrderTable"
+    [orders]="dataOrders.orders"
 ></app-table>
 </div>

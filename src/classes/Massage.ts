@@ -5,12 +5,11 @@ export enum EnumStatus{
 }
 
 export class Massage{
-
-
     constructor(
-        public Id:number,
+        
         public User:User,
         public Massage?:string,
-        public Status:EnumStatus=EnumStatus.newT
+        public Status:EnumStatus=EnumStatus.newT,
+        public Id?:number,
     ){}
 }

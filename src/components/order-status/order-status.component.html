@@ -1,9 +1,13 @@
 <div>
-@if( this.dataStatus.codeOrder==undefined){
+@if( this.dataOrder.codeOrder==-1){
     <h1>404</h1>
+    <h2>הזמנה לא נמצאה</h2>
+    <p>ייתכן והזמנה זו נמחקה או מעולם לא נוצרה</p>
+    <p>אם הזמנה זו נוצרה על ידך, צור קשר עם המוקד הטלפוני שלנו</p>
+    <button [routerLink]="'calculator'">ליצירת הזמנה חדשה</button>
 }
 @else{
-    <h1>{{this.dataStatus.codeOrder}} :מספר הזמנה</h1>
-    <h2>c#את מצב ההזמנה נשלוף מה</h2>
+    <h1>{{this.dataOrder.codeOrder}} :מספר הזמנה</h1>
+    <h2>{{status}}</h2>
 }
 </div>

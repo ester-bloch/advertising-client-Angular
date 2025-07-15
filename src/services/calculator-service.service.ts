@@ -104,7 +104,7 @@ export class CalculatorService {
 ]
 ``` */
   SumToPay: number = 0
-  availableItems: Array<Item> = new Array<Item>()
+  availableItems: Array<Item> = []
   chosenItems: Array<Item> = new Array<Item>()
   calcSumToPay(){
   this.SumToPay=0

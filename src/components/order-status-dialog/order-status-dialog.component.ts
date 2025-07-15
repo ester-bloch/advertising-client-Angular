@@ -28,6 +28,7 @@ export class OrderStatusDialogComponent {
   readonly data = inject<NavComponent>(MAT_DIALOG_DATA);
   readonly code = model(this.data.code);
 
+  
   onNoClick(): void {
     this.dialogRef.close();
   }

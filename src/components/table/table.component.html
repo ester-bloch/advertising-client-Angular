@@ -12,9 +12,9 @@
             @for(user of users;track user)
             {
                 <tr>
-                    <td>{{user.name}}</td>
-                    <td>{{user.phone}}</td>
-                    <td>{{user.email}}</td>
+                    <td>{{user.Name}}</td>
+                    <td>{{user.Phone}}</td>
+                    <td>{{user.Email}}</td>
                 </tr>
             } 
         }
@@ -22,15 +22,52 @@
             @for(massage of massages;track massage)
             {
                 <tr>
-                    <td>{{massage.user?.name}}</td>
-                    <td>{{massage.user?.phone}}</td>
-                    <td>{{massage.user?.email}}</td>
-                    <td>{{massage.massage}}</td>
+                    <td>{{massage.User.Name}}</td>
+                    <td>{{massage.User.Phone}}</td>
+                    <td>{{massage.User.Email}}</td>
+                    <td>{{massage.Massage}}</td>
                     <td>
                         <app-my-button 
-                        [textToShow]="massage.status"
-                        (myOnClick)="updateStatus(massage.id)"
-                        [backgroundColor]="massage.status==EnumStatus.newT?'red':massage.status==EnumStatus.InTreatment?'orange':'yellow'">
+                        [textToShow]="massage.Status"
+                        (myOnClick)="updateStatus(massage)"
+                        [backgroundColor]="massage.Status==EnumStatus.newT?'red':massage.Status==EnumStatus.InTreatment?'orange':'yellow'">
+                        </app-my-button>
+                    </td>
+                    <td>
+                        <app-my-button 
+                        [textToShow]="'🗑️'"
+                        (myOnClick)="deleteMassage(massage)">
+                        </app-my-button>
+                    </td>
+                </tr>
+            } 
+        }
+        @if(orders){
+            @for(order of orders;track order)
+            {
+                <tr>
+                    <td>{{order.User.Name}}</td>
+                    <td>{{order.User.Phone}}</td>
+                    <td>{{order.User.Email}}</td>
+                    <!-- <td>{{order.OrderDate| date:'dd/MM/yyyy'}}}</td> -->
+                    <td>
+                        <app-my-button 
+                        [textToShow]="'רשימת הזמנה'"
+                        (myOnClick)="openViewDialog(order)">
+                        </app-my-button>
+                    </td>
+                    <td>{{order.SumToPay}}</td>
+
+                    <td>
+                        <app-my-button 
+                        [textToShow]="'📝'"
+                        (myOnClick)="openEditDialog(order)">
+                        </app-my-button>
+                    </td>
+                    <td>
+                        <app-my-button 
+                        [textToShow]="'🗑️'"
+                        (myOnClick)="deleteOrder(order.Id)">
                         </app-my-button>
                     </td>
                 </tr>

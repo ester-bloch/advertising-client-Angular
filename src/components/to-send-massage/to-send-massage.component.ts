@@ -18,11 +18,9 @@ constructor(public dataMassage:MassageService,public dataUser:UserService){}
   mass:string="";
   sand:boolean=false;
   save(){
-    //כאן צריך פניה לקונטרולר
-    this.dataMassage.massages.push(new Massage(this.dataUser.thisUser,this.mass))
-    //נעשה בדיקת תקינות האם המייל קיים c# ב
-    //ואם לא- נוסיף למסד
-    this.dataUser.users.push(this.dataUser.thisUser)
+    this.dataMassage.addMassage(new Massage(this.dataUser.thisUser,this.mass));
+    //this.dataMassage.massages.push(new Massage(this.dataUser.thisUser.Id,this.mass))
+    // this.dataUser.users.push(this.dataUser.thisUser)
     this.sand=true;
   }
 }
