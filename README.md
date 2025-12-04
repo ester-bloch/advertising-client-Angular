@@ -78,4 +78,5 @@ This project is licensed under the MIT License.
 ## Contact
 
 For business inquiries, please contact us via our [website](#) or through our social media channels.
+Good luck!
 ```
